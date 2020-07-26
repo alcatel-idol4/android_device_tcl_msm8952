@@ -39,13 +39,12 @@ TARGET_USES_64_BIT_BINDER := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.selinux=permissive androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+BOARD_KERNEL_IMAGE_NAME  := Image.gz-dtb
 BOARD_KERNEL_BASE        := 0x80000000
 BOARD_KERNEL_PAGESIZE    := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
 TARGET_KERNEL_SOURCE := kernel/tcl/msm8952
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
@@ -120,8 +119,9 @@ endif
 WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
 
 # Display
-MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x02000000
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
+OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 TARGET_CONTINUOUS_SPLASH_ENABLED := true
 TARGET_USES_C2D_COMPOSITION := true
@@ -130,9 +130,6 @@ TARGET_USES_NEW_ION_API :=true
 
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
-
-OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
-USE_OPENGL_RENDERER := true
 
 # Filesystem
 TARGET_USERIMAGES_USE_F2FS := true
@@ -160,6 +157,9 @@ DEVICE_MATRIX_FILE   := $(VENDOR_PATH)/compatibility_matrix.xml
 TARGET_INIT_VENDOR_LIB := libinit_msm8952
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8952
+
+# IPA
+USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
 
 # Lineage Hardware
 BOARD_HARDWARE_CLASS += \
