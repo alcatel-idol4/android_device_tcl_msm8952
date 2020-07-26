@@ -1,2 +1,0 @@
-allow hal_audio_default i2c_device:chr_file ioctl;
-allow hal_audio_default sysfs:file { open read write };
