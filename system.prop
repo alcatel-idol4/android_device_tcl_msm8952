@@ -171,7 +171,7 @@ camera.lowpower.record.enable=1
 sched.colocate.enable=1
 
 persist.radio.lw_enabled=true
-persist.sys.usb.config=mnt,adb
+persist.vendor.usb.config.extra=mass_storage,adb
 qemu.hw.mainkeys=0
 
 persist.debug.sensors.hal=1
