@@ -90,8 +90,9 @@ telephony.lteOnCdmaDevice=1
 # System prop to turn on hfp client
 bluetooth.hfp.client=1
 qcom.bluetooth.soc=smd
+ro.btconfig.if=smd
+ro.btconfig.vendor=qcom
 ro.qualcomm.bt.hci_transport=smd
-qcom.bt.le_dev_pwr_class=1
 
 #Simulate sdcard on /data/media
 #
@@ -178,5 +179,5 @@ persist.debug.sensors.hal=1
 debug.qualcomm.sns.daemon=1
 debug.qualcomm.sns.libsensor1=1
 
-ro.disableWifiApFirmwareReload=true
+wifi.direct.interface=p2p0
 wifi.interface=wlan0
