@@ -1,4 +1,4 @@
-LOCAL_PATH := $(call my-dir)
+LOCAL_MODULE := gps
 
 include $(CLEAR_VARS)
 

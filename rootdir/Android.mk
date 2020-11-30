@@ -1,5 +1,3 @@
-LOCAL_PATH := $(call my-dir)
-
 # Init scripts
 
 include $(CLEAR_VARS)

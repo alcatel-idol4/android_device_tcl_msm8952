@@ -1,3 +1,5 @@
+LOCAL_MODULE := gps
+
 LOCAL_PATH := $(call my-dir)
 include $(LOCAL_PATH)/build/target_specific_features.mk
 

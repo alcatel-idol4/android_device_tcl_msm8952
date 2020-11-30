@@ -14,6 +14,11 @@
 # limitations under the License.
 #
 
+LOCAL_MODULE := wifi_symlinks
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := FAKE
+LOCAL_MODULE_SUFFIX := -timestamp
+
 LOCAL_PATH := $(call my-dir)
 
 ifneq ($(filter idol4,$(TARGET_DEVICE)),)
@@ -21,11 +26,6 @@ ifneq ($(filter idol4,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
-
-LOCAL_MODULE := wifi_symlinks
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := FAKE
-LOCAL_MODULE_SUFFIX := -timestamp
 
 include $(BUILD_SYSTEM)/base_rules.mk
 
