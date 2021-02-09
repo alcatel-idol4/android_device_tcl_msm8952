@@ -1,3 +1,4 @@
 allow netmgrd default_prop:property_service set;
 allow netmgrd property_socket:sock_file write;
 allow netmgrd sysfs:file { open read };
+allow netmgrd init:unix_stream_socket connectto;

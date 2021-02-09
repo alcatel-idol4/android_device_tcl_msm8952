@@ -1,3 +1,4 @@
 allow cnd sysfs:file read;
 allow cnd system_data_file:dir read;
 allow cnd system_data_file:file { getattr ioctl lock open read write };
+allow cnd sysfs:file open;
